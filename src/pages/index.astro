@@ -1,21 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
+const title = "BiBak | Resmi Web Sitesi";
 ---
 
-<Layout title="Welcome to Astro.">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
-</Layout>
+<section style="
+  max-width:900px;margin:0 auto;padding:40px 16px;text-align:left">
+  <h1 style="font-size:clamp(28px,6vw,44px);line-height:1.1;margin:0 0 12px;color:#111">
+    BiBak Test & Eğlence Merkezi
+  </h1>
+  <p style="max-width:46ch;font-size:clamp(15px,2.8vw,18px);color:#3D3D3D;margin:0 0 16px">
+    Eğlenceli, düşündürücü ve paylaşması kolay testler. Her gün yeni bir merak!
+  </p>
+  <a href="/tests" style="
+     display:inline-block;padding:12px 16px;border-radius:10px;
+     background:linear-gradient(90deg,#ff6a00,#ff2d20);color:#111;
+     font-weight:700;text-decoration:none">Testleri keşfet</a>
+</section>
