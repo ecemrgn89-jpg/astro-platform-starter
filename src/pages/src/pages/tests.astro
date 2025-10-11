@@ -1,0 +1,58 @@
+---
+const title = "Testler | BiBak";
+const tests = [
+  {
+    slug: "yarin-seni-ne-bekliyor",
+    title: "Yarın Seni Ne Bekliyor?",
+    summary: "10 soruluk hızlı test: küçük sürpriz mi, büyük başlangıç mı?",
+    cover: "/quiz-covers/yarin.jpg" // yoksa şimdilik kaldırabilirsin
+  },
+];
+---
+
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Testleri Keşfet</h1>
+      <p class="lead">Eğlenceli, düşündürücü ve paylaşmalık testler burada.</p>
+
+      <section class="grid">
+        {tests.map(t => (
+          <a class="card" href={`/tests/${t.slug}`}>
+            {t.cover ? <img src={t.cover} alt={t.title} loading="lazy" /> : null}
+            <h2>{t.title}</h2>
+            <p>{t.summary}</p>
+            <span class="cta">Teste Başla</span>
+          </a>
+        ))}
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  .wrap{ max-width:980px; margin:0 auto; padding:24px 16px; }
+  .lead{ color: var(--bibak-sub); margin: 6px 0 18px; }
+  .grid{
+    display:grid; gap:16px;
+    grid-template-columns: repeat( auto-fill, minmax(260px, 1fr) );
+  }
+  .card{
+    display:block; padding:14px; border-radius:14px; background:#fff;
+    box-shadow:0 6px 22px rgba(0,0,0,.06); transition:transform .06s ease, box-shadow .2s;
+  }
+  .card:hover{ transform: translateY(-2px); box-shadow:0 10px 28px rgba(0,0,0,.09); }
+  .card img{ width:100%; height:150px; object-fit:cover; border-radius:10px; }
+  .card h2{ margin:12px 0 6px; font-size:18px; letter-spacing:-.2px; }
+  .cta{
+    display:inline-block; margin-top:10px; padding:10px 12px; border-radius:10px;
+    background: linear-gradient(90deg, var(--bibak-grad1), var(--bibak-grad2));
+    color:#111; font-weight:700; text-decoration:none;
+  }
+</style>
