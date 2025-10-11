@@ -1,52 +1,98 @@
 ---
-const title = "BiBak | Resmi Web Sitesi";
+const title = "BiBak – Gündem, kültür ve eğlence";
 ---
 
-<section style="
-  max-width:900px;margin:0 auto;padding:40px 16px;text-align:left">
-  <h1 style="font-size:clamp(28px,6vw,44px);line-height:1.1;margin:0 0 12px;color:#111">
-    BiBak Test & Eğlence Merkezi
-  </h1>
-  <p style="max-width:46ch;font-size:clamp(15px,2.8vw,18px);color:#3D3D3D;margin:0 0 16px">
-    Eğlenceli, düşündürücü ve paylaşması kolay testler. Her gün yeni bir merak!
-  </p>
-  <a href="/tests" style="
-     display:inline-block;padding:12px 16px;border-radius:10px;
-     background:linear-gradient(90deg,#ff6a00,#ff2d20);color:#111;
-     font-weight:700;text-decoration:none">Testleri keşfet</a>
-</section>
-<style is:global>
-  :root{
-    --bibak-bg1:#FFFDF9;
-    --bibak-bg2:#FFF5F0;
-    --bibak-text:#111111;
-    --bibak-sub:#3D3D3D;
-    --bibak-grad1:#ff6a00;  /* turuncu */
-    --bibak-grad2:#ff2d20;  /* kırmızı */
+<main class="hero">
+  <section class="hero__inner">
+    <h1>BiBak’a Hoş Geldiniz</h1>
+    <p class="lead">
+      BiBak; gündemi, kültürü ve yaşamı güvenilir bir dille anlatan, okuruna saygılı bir yayın.
+    </p>
+
+    <h2 class="sub">Testleri Keşfet 🎯</h2>
+    <p class="desc">
+      Eğlenceli, düşündürücü ve kendini tanımaya yardımcı testler seni bekliyor.
+    </p>
+    <a class="cta" href="#">
+      Testleri gör
+    </a>
+
+    <h3 class="blockTitle">Ne Sunuyoruz?</h3>
+    <ul class="list">
+      <li>Özgün içerikler ve seçkiler</li>
+      <li>Hızlı, sorunsuz ve mobil uyumlu deneyim</li>
+      <li>Topluluk özellikleri (yorumlar, listeler vb.)</li>
+    </ul>
+
+    <h3 class="blockTitle">Neden BiBak?</h3>
+    <ul class="list">
+      <li>Şeffaf editör politikası ve doğruluk prensibi</li>
+    </ul>
+  </section>
+</main>
+
+<style>
+  .hero {
+    /* sayfanın tamamında yumuşak degrade */
+    background: radial-gradient(1200px 800px at 10% -10%, #ffe9df 0%, #fff 55%);
+    min-height: 100dvh;
+  }
+  .hero__inner{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
   }
 
-  html, body {
-    margin:0; padding:0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    color: var(--bibak-text);
-    background: linear-gradient(180deg, var(--bibak-bg1) 0%, var(--bibak-bg2) 100%);
+  /* BÜYÜK BAŞLIKLAR */
+  h1{
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+    margin: 8px 0 18px;
+    color: #111;
+  }
+  .lead{
+    font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+    color: #333;
+    max-width: 60ch;
   }
 
-  /* Link’ler */
-  a { color: var(--bibak-text); text-decoration: none; }
-  a:hover { opacity:.9; }
+  .sub{
+    margin: 36px 0 6px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  .desc{
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color:#333;
+    margin-bottom: 16px;
+    max-width: 60ch;
+  }
 
-  /* Başlık/p paragraf küçük ayar */
-  h1{ letter-spacing:-0.3px; }
-  p { color: var(--bibak-sub); line-height:1.6; }
-
-  /* CTA butonları tek yerde kontrol edelim */
   .cta{
-    display:inline-block; padding:12px 16px; border-radius:10px;
-    background: linear-gradient(90deg, var(--bibak-grad1), var(--bibak-grad2));
-    color:#111; font-weight:700; text-decoration:none;
-    box-shadow: 0 6px 22px rgba(0,0,0,.06);
-    transition: transform .06s ease;
+    display:inline-block;
+    background: linear-gradient(90deg,#ff7a59,#f7b267);
+    color:#fff;
+    font-weight:700;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration:none;
+    box-shadow: 0 8px 18px rgba(255,122,89,.25);
+    transition: transform .12s ease, opacity .12s ease;
   }
-  .cta:active{ transform: translateY(1px); }
+  .cta:active, .cta:hover{ transform: translateY(1px); opacity:.92; }
+
+  .blockTitle{
+    margin: 44px 0 12px;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 800;
+  }
+  .list{
+    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+    color:#222;
+    padding-left: 22px;
+  }
+  .list li{ margin: 8px 0; }
 </style>
