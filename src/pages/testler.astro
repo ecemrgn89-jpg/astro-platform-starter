@@ -1,0 +1,41 @@
+---
+const tests = [
+  { slug: "kisi-tipin",    title: "Kişilik Tipin Ne?",        desc: "10 soruda eğlenceli kişilik testi." },
+  { slug: "film-zevki",    title: "Film Zevkin",              desc: "Hangi türler tam sana göre?" },
+  { slug: "renk-tercihi",  title: "Renk Tercihin Ne Anlatıyor?", desc: "Sevdiğin renklere göre minik analiz." },
+];
+---
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Testler | BiBak</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root { --bg:#fff7f0; --card:#ffffff; --txt:#121212; --muted:#6b6b6b; --bd:#efefef; }
+      body { margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; color:var(--txt); background:var(--bg); }
+      .wrap { max-width:960px; margin:0 auto; padding:24px; }
+      h1 { font-size:28px; margin:8px 0 20px; }
+      .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); }
+      .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; padding:18px; box-shadow:0 4px 14px rgba(0,0,0,.04); }
+      .card h3 { margin:0 0 8px; font-size:18px; }
+      .card p { margin:0 0 14px; color:var(--muted); }
+      .btn { display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; background:linear-gradient(135deg,#ff6a3a,#ffb86b); color:#fff; font-weight:600; }
+      .back { display:inline-block; margin-bottom:16px; color:#444; text-decoration:none }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a class="back" href="/">← Ana sayfa</a>
+      <h1>Testler</h1>
+      <div class="grid">
+        {tests.map(t => (
+          <article class="card">
+            <h3>{t.title}</h3>
+            <p>{t.desc}</p>
+            <a class="btn" href={`/test/${t.slug}`}>Teste başla</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </body>
+</html>
